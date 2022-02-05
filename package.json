@@ -1,0 +1,23 @@
+{
+  "name": "trainning_node",
+  "version": "1.0.0",
+  "description": "Treinando node",
+  "main": "index.js",
+  "author": "Gustavo Silva",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.15.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+}
