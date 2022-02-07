@@ -18,5 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'User',
   });
+  User.sync({force: false})
   return User;
+  
 };

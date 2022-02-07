@@ -4,11 +4,14 @@ const morgan = require("morgan");
 const routes = require("./src/routes");
 const port = require("./config.json").port;
 const path = require("path");
+const bodyParser = require('body-parser');
 
 const app = express();
 
+
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 app.use(morgan("dev"));
 
 app.use(

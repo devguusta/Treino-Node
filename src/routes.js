@@ -1,13 +1,13 @@
-const express = require("express");
+import {Router} from 'express';
 const UserController = require("./controller/UserController");
 
 const auth = require("./middleware/auth");
 
-const routes = express.Router();
+const routes = new Router();
 
 //User routes
 
-routes.post("/user/register", UserController.create);
-routes.post("/user/login");
+routes.post("/user/register",UserController.create);
+routes.post("/user/login", UserController.login);
 
-module.exports = routes;
+export default routes;
